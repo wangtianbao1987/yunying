@@ -1,0 +1,107 @@
+body{
+	padding: 0px;
+	margin: 0px;
+}
+.tit{
+	padding:30px 10px 5px 10px;
+	color: #FF6666;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bolder;
+}
+.tit01{
+	padding:25px 10px 10px 10px;
+	color: #FF6666;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bolder;
+}
+.tb{
+	width:100%;
+	position: relative;
+	border-collapse:collapse;
+	border:none;
+}
+.tb th{
+	padding:0px 10px;
+	text-align: left;
+	height: 70px;
+	background-color: #FFCCCC;
+	border:solid #FFFFCC 1px;
+}
+.tb td{
+	text-align: left;
+	background-color: #CCFFFF;
+	min-width: 90px;
+	text-align: center;
+	position: relative;
+	border:solid #FFFFCC 1px;
+}
+.address{
+	color: #99CC66;
+}
+.address th{
+	padding:10px;
+	text-align: left;
+}
+.moveNode,.addNode{
+	position: absolute;
+	font-size: 12px;
+	border-radius:50%;
+	width:23px;
+	height:23px;
+	cursor: pointer;
+	padding:0px;
+	margin: 0px;
+	background-color: #FFFFCC;
+}
+.moveNode{
+	top: 4px;
+	left: 4px;
+}
+.addNode{
+	right: 4px;
+	bottom: 4px;
+}
+.itmSl{
+	position: absolute;
+	font-size: 12px;
+	border-radius:50%;
+	border:1px solid #99CC66;
+	min-width:23px;
+	line-height:23px;
+	background-color: #FF6666;
+	color:#FFFFFF;
+	left: 4px;
+	bottom: 4px;
+}
+.dingcan{
+	width: 100%;
+	max-height: 200px;
+	overflow: auto;
+	position: fixed;
+	bottom: 0px;
+	background-color: #FFFFFF;
+}
+.dingcan>div{
+	line-height: 45px;
+	padding:0px;
+	margin: 0px 0px 1px 0px;
+	background-color: #CCCCFF;
+}
+.bottomZhanwei{
+	height:200px;
+}
+select{
+	min-width: 80px;
+	height: 40px;
+	border-radius:10%;
+	border: solid 1px #000000;
+	background-color:#FFFFFF;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	outline:none;
+	padding: 0px 14px 0px 5px;
+}
+select::-ms-expand { display: none; }
