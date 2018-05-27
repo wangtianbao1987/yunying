@@ -20,6 +20,14 @@ var caidanDatas = <%=InitData.toJson()%>
 <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body bgcolor="#FFFFCC">
+
+<div style="padding:10px">
+<div style="color:red">此功能处于开发阶段，在此期间点餐请拨打订餐电话：</div>
+<br/>
+<div style="color:red">
+<a href="tel:17601339729">17601339729</a> 或  <a href="tel:17721000136">17721000136</a></div>
+</div>
+
 <div class="tit">云英沙县小吃牛肉汤馆</div>
 <table class="address">
 <tr>
@@ -39,5 +47,6 @@ var caidanDatas = <%=InitData.toJson()%>
 </div>
 </div>
 </div>
+
 </body>
 </html>
