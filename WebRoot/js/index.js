@@ -81,7 +81,7 @@ $(document).ready(function(){
 				moveNode.html('-');
 				td.append(moveNode);
 			}
-			td.css({backgroundColor:'#FFCC99'});
+			td.css({backgroundColor:'#FFCCEE'});
 		},
 		setShowCount:function(td,count){
 			if(!count || count == 0){

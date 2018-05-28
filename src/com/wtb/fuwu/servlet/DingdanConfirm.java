@@ -31,9 +31,7 @@ public class DingdanConfirm extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String winId = request.getParameter("winId");
-		request.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json; charset=UTF-8");
-		response.setCharacterEncoding("UTF-8");
 		String[] idss = request.getParameterValues("ids[]");
 		if(idss==null || idss.length==0){
 			MyUtils.errOut("未点餐", response);

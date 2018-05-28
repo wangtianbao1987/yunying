@@ -3,18 +3,29 @@ body{
 	margin: 0px;
 }
 .tit{
-	padding:30px 10px 5px 10px;
-	color: #FF6666;
-	font-size: 30px;
+	margin:50px 10px 30px 10px;
+	color: #FF0000;
+	font-size: 32px;
 	text-align: center;
 	font-weight: bolder;
+	/* text-shadow: 0 1px #FFFFFF, 1px 0 #FFFFFF, -1px 0 #FFFFFF, 0 -1px #FFFFFF; */
+	text-shadow: 2px 2px 2px #FF6666;
+	
+    transform:scale(1,2);
+    -ms-transform:scale(1,2);
+    -webkit-transform:scale(1,2);
+    -moz-transform:scale(1,2);
+    -o-transform:scale(1,2);
+    
 }
 .tit01{
 	padding:25px 10px 10px 10px;
 	color: #FF6666;
-	font-size: 20px;
+	font-size: 28px;
 	text-align: center;
 	font-weight: bolder;
+	text-shadow: 0 1px #FFF, 1px 0 #FFF, -1px 0 #FFF, 0 -1px #FFF;
+	/* text-shadow: 2px 2px 2px #FF6666; */
 }
 .tb{
 	width:100%;
@@ -26,8 +37,10 @@ body{
 	padding:0px 10px;
 	text-align: left;
 	height: 70px;
-	background-color: #FFCCCC;
+	background-color: #CCFFCC;
 	border:solid #FFFFCC 1px;
+	text-shadow: 0 1px #FFF, 1px 0 #FFF, -1px 0 #FFF, 0 -1px #FFF;
+	font-weight: normal;
 }
 .tb td{
 	text-align: left;
@@ -36,6 +49,8 @@ body{
 	text-align: center;
 	position: relative;
 	border:solid #FFFFCC 1px;
+	color:#6666FF;
+	text-shadow: 0 1px #FFF, 1px 0 #FFF, -1px 0 #FFF, 0 -1px #FFF;
 }
 .address{
 	color: #99CC66;
@@ -66,11 +81,12 @@ body{
 .itmSl{
 	position: absolute;
 	font-size: 12px;
+	text-shadow: 0px 0px 0px;
 	border-radius:50%;
 	border:1px solid #99CC66;
 	min-width:23px;
 	line-height:23px;
-	background-color: #FF6666;
+	background-color: #FF7777;
 	color:#FFFFFF;
 	left: 4px;
 	bottom: 4px;
@@ -87,7 +103,8 @@ body{
 	line-height: 45px;
 	padding:0px;
 	margin: 0px 0px 1px 0px;
-	background-color: #CCCCFF;
+	background-color: #CCEEFF;
+	text-shadow: 0 1px #FFF, 1px 0 #FFF, -1px 0 #FFF, 0 -1px #FFF;
 }
 .bottomZhanwei{
 	height:200px;

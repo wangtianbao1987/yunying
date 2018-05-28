@@ -26,7 +26,11 @@ public class MyUtils {
 		map.put("success", true);
 		JSONObject jobj = new JSONObject(map);
 		String json = jobj.toString();
+		System.out.println(json);
 		PrintWriter out = response.getWriter();
 		out.print(json);
+	}
+	public static boolean isEmpty(Object obj) {
+		return obj==null || "".equals(obj);
 	}
 }

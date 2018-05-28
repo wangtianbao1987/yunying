@@ -22,9 +22,6 @@ public class OrderConfirm extends HttpServlet {
 
 	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
 		HttpSession session = request.getSession();
 		String winId = request.getParameter("winId");
 		List<Map<String,Object>> items = (List<Map<String,Object>>)session.getAttribute(winId);

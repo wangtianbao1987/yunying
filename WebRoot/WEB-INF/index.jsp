@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <title>在线点餐</title>
+<link type="text/css" rel="stylesheet" href="css/com.css"/>
 <link type="text/css" rel="stylesheet" href="css/global.css"/>
 <link type="text/css" rel="stylesheet" href="css/index.css"/>
 
@@ -27,6 +28,9 @@ var caidanDatas = <%=InitData.toJson()%>
 <div style="color:red">
 <a href="tel:17601339729">17601339729</a> 或  <a href="tel:17721000136">17721000136</a></div>
 </div>
+
+
+<div style="text-align: right;padding:10px"><a class="button" href="query.jsp">订餐查询</a></div>
 
 <div class="tit">云英沙县小吃牛肉汤馆</div>
 <table class="address">

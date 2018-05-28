@@ -8,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
 <title>信息确认</title>
+<link type="text/css" rel="stylesheet" href="css/com.css"/>
 <link type="text/css" rel="stylesheet" href="css/global.css"/>
 <link type="text/css" rel="stylesheet" href="css/orderConfirm.css"/>
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
@@ -27,7 +28,8 @@ var winId = '<%=winId%>';
 </head>
 <body bgcolor="#FFFFCC">
 
-<h3 style="text-align: center;color: #FF9999">信息确认</h3>
+<div class="tit01">信息确认</div>
+
 <table class="tb">
 <tr>
 <th>编号</th><th>名称</th><th>单价</th><th>数量</th><th>总价</th>
