@@ -18,17 +18,83 @@
 var winId = '<%=UUID.randomUUID()%>';
 var caidanDatas = <%=InitData.toJson()%>
 </script>
-<script type="text/javascript" src="js/index.js"></script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
+
+<style type="text/css">
+body{
+	background-color: #FFF;
+}
+.daohang{
+	position: relative;
+	width: 100%;
+}
+.daohang>.dhItem{
+	float: left;
+	width: 25%;
+	text-align: center;
+	box-sizing: border-box;
+	padding:15px 10px;
+	background:#CCC;
+	text-shadow: 0 1px #FFF, 1px 0 #FFF, -1px 0 #FFF, 0 -1px #FFF;
+	cursor: pointer;
+}
+.daohang>.active{
+	border-bottom: 0px;
+	background: -webkit-linear-gradient(#CCC, #FFF);
+	background: -o-linear-gradient(#CCC, #FFF);
+	background: -moz-linear-gradient(#CCC, #FFF);
+	background: linear-gradient(#CCC, #FFF);
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var datas = <%=InitData.toJson()%>
+	var showItem = function(i){
+		$('.mainContent').html('');
+		var caidanData = datas[i];
+		var table = $('<table>');
+		table.addClass('tb');
+		for(var ii=0;ii<caidanData.values.length;ii++){
+			var tr = $('<tr>');
+			tr.attr('id','K_'+i+'_'+ii);
+			var val1 = caidanData.values[ii];
+			var showName = val1.idx+'、'+val1.name;
+			var th = $('<th>');
+			th.html(showName);
+			tr.append(th);
+			for(var iii=0;iii<val1.values.length;iii++){
+				var val2 = val1.values[iii];
+				var td = $('<td>');
+				td.attr('index1',i);
+				td.attr('index2',ii);
+				td.attr('index3',iii);
+				if(val2.price){
+					td.html(val2.price+'元'+val2.remark);
+				}else if(val2.minPrice && val2.maxPrice){
+					td.html(val2.minPrice+'-'+val2.maxPrice+'元'+val2.remark);
+				}else if(val2.perPrice){
+					td.html(val2.perPrice+'元/'+val2.unit+val2.remark);
+				}
+				tr.append(td);
+			}
+			table.append(tr);
+		}
+		$('.mainContent').append(table);
+		$('table tr').attr('valign','middle');
+	}
+	$('.daohang>.dhItem').unbind('click');
+	$('.daohang>.dhItem').bind('click',function(){
+		$('.daohang>.active').removeClass('active');
+		$(this).addClass('active');
+		showItem($(this).attr('index'));
+	});
+	showItem(0);
+});
+</script>
+
 </head>
-<body bgcolor="#FFFFCC">
-
-<div style="padding:10px">
-<div style="color:red">此功能处于开发阶段，在此期间点餐请拨打订餐电话：</div>
-<br/>
-<div style="color:red">
-<a href="tel:17601339729">17601339729</a> 或  <a href="tel:17721000136">17721000136</a></div>
-</div>
-
+<body bgcolor="#FFF">
 
 <div style="text-align: right;padding:10px"><a class="button" href="query.jsp">订餐查询</a></div>
 
@@ -40,16 +106,21 @@ var caidanDatas = <%=InitData.toJson()%>
 </tr>
 </table>
 <div>
+
+<div>
+<div class="daohang">
+<div class="dhItem active" index="0">汤面</div>
+<div class="dhItem" index="1">老板推荐</div>
+<div class="dhItem" index="2">精美小吃</div>
+<div class="dhItem" index="3">另加</div>
+</div>
+
 <div class="mainContent"></div>
-<div class="bottomZhanwei"></div>
-<div class="dingcan">
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div style="position: fixed;bottom: 0px; width: 100%;">
-<div style="text-align:right">共计<span class="totMoney">0</span>元</div>
-<div class="ddokbtn" style="text-align:center;background-color: #CCFFFF">确定</div>
+
 </div>
-</div>
+
+
+
 </div>
 
 </body>

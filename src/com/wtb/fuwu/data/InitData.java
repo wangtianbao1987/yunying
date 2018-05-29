@@ -58,7 +58,7 @@ public class InitData {
 		c1 = new CaidanData(4, "牛杂汤面", values2);
 		values1.add(c1);
 		
-		CaidanDatas cd1 = new CaidanDatas(null, values1);
+		CaidanDatas cd1 = new CaidanDatas("汤面", values1);
 		list.add(cd1);
 		
 		
